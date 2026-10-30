@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ping Pong Game</title>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #101827;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+h1 {
+  color: #38e8c5;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  color: #aab6c8;
+  margin-bottom: 15px;
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin: 15px;
+}
+
+.score {
+  font-size: 35px;
+  font-weight: bold;
+  color: #38e8c5;
+}
+
+.player {
+  font-size: 13px;
+  color: #aab6c8;
+}
+
+.game-container {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+
+canvas {
+  width: 100%;
+  background: #152b38;
+  border: 3px solid #38e8c5;
+  border-radius: 12px;
+  display: block;
+  touch-action: none;
+}
+
+button {
+  background: #38e8c5;
+  color: #101827;
+  border: none;
+  padding: 12px 20px;
+  margin: 7px 4px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #20c9a8;
+}
+
+.controls {
+  color: #b8c5d5;
+  font-size: 13px;
+  margin-top: 12px;
+}
+
+</style>
+</head>
+<body>
+
+<h1>🏓 PING PONG</h1>
+<div class="subtitle">Challenge the Computer!</div>
+
+<div class="scoreboard">
+  <div>
+    <div class="player">PLAYER</div>
+    <div class="score" id="playerScore">0</div>
+  </div>
+  <div>
+    <div class="player">COMPUTER</div>
+    <div class="score" id="computerScore">0</div>
+  </div>
+</div>
+
+<div class="game-container">
+  <canvas id="game" width="600" height="380"></canvas>
+</div>
+
+<div>
+  <button onclick="startGame()">▶ Mulai</button>
+  <button onclick="pauseGame()">⏸ Pause</button>
+  <button onclick="restartGame()">↻ Restart</button>
+</div>
+
+<div class="controls">
+  Keyboard: W / S atau ↑ / ↓ untuk bergerak.<br>
+  HP: Sentuh dan geser paddle di sisi kiri layar.<br>
+  Pemain pertama yang mencapai 5 poin menang!
+</div>
+<script src="script.js"></script>
+</body>
+</html>
